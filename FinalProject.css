@@ -22,28 +22,33 @@ body {
   }
   
   .btn-group button {
-    background-color: #e4cbe4; /* Green background */
-    border: 1px solid rgb(191, 156, 200); /* Green border */
+    background-color: #e4cbe4;
+    border: 1px solid rgb(191, 156, 200); 
     border-radius: 8px;
-    color: rgb(0, 0, 0); /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 15%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+    color: rgb(0, 0, 0); 
+    padding: 10px 24px;
+    cursor: pointer; 
+    width: 15%; 
+    display: block; 
     font-family:"Courier New", Courier, monospace;
     font-size: 100%;
     
   }
 
-  /* Add a background color on hover */
   .btn-group button:hover {
     background-color: #eed8ed;
   }
 
-  img {
+  .imgprofile {
     border-radius: 50%;
     width: 250px;
     height: 250px;
+    display: block;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;   
+    align-items: center;
+    padding: 40px 0;
   }
 
   .topnav {
@@ -63,21 +68,21 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    align-content: center;
   }
   
   .topnav a:hover {
     background-color: #eed8ed;
     color: black;
   }
-  
+
   .topnav a.active {
     background-color: #bf99d5;
     color: white;
   }
 
   @import url(https://fonts.googleapis.com/css?family=Exo:100);
-  /* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-  /* Animations */
+
   @-webkit-keyframes bg-scrolling-reverse {
     100% {
       background-position: 50px 50px;
@@ -118,53 +123,47 @@ body {
       background-position: 50px 50px;
     }
   }
-  /* Main styles */
+
   body {
     color: #000000;
-    /* img size is 50x50 */
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-    -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Safari 4+ */
-    -moz-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Fx 5+ */
-    -o-animation: bg-scrolling-reverse 0.92s infinite;
-    /* Opera 12+ */
-    animation: bg-scrolling-reverse 0.92s infinite;
-    /* IE 10+ */
+    -webkit-animation: bg-scrolling-reverse 4s infinite;
+    -moz-animation: bg-scrolling-reverse 4s infinite;
+    -o-animation: bg-scrolling-reverse 4s infinite;
+    animation: bg-scrolling-reverse 4s infinite;
     -webkit-animation-timing-function: linear;
     -moz-animation-timing-function: linear;
     -o-animation-timing-function: linear;
     animation-timing-function: linear;
-  
     padding-top: 50px
+
   }
 
   .text-container {
-    background-color: rgb(233, 220, 238); /* White background */
-    border-radius: 10px; /* Optional: Rounds the corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+    background-color: rgb(233, 220, 238);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
     max-width: 92%;
-    padding: 10px 20px; /* Adjusts space inside */
+    padding: 10px 20px;
     margin-top: 5%;
 
   }
 
   .text-container1 {
-    background-color: rgb(233, 220, 238); /* White background */
-    border-radius: 10px; /* Optional: Rounds the corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+    background-color: rgb(233, 220, 238); 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
     max-width: 45%;
-    padding: 10px 20px; /* Adjusts space inside */
-    margin-top: 3%;
+    padding: 10px 20px; 
 
   }
 
   .text-container2 {
-    background-color: rgb(233, 220, 238); /* White background */
-    border-radius: 10px; /* Optional: Rounds the corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow */
+    background-color: rgb(233, 220, 238); 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     max-width: 42%;
-    padding: 10px 20px; /* Adjusts space inside */
+    padding: 10px 20px; 
     margin-top: 3%;
     display: flex; 
     flex: 50%;
@@ -221,13 +220,20 @@ body {
   .item {
     width: 50px;
     height: 50px;
-    mix-blend-mode: color-burn;
-    margin: 0;
-    padding: 0;    
-    align-items:flex-end;
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: 0%;
+    padding: 0;
+    align-items: center;    
     background-color: #a074a3;
+
 
   }
 
 
+  .item:hover {
+    background-color:#a074a3;
+    color: #a074a3;
+  }
 
+  
