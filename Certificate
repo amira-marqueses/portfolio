@@ -8,19 +8,19 @@
   </head>
   <body>
     <b>
-      <div class="topnav">
-        <div class="logo">
-          <a href="index.html">
-            <img class="item" src="images/Adobe Express - file.png" alt="Adobe logo">
-          </a>
-        </div>
-        <div class="nav-links">
-          <a class="active" href="#about">About</a>
-          <a href="TechStack.html">Tech Stack</a>
-          <a href="Contact.html">Contact</a>
-          <a href="Certificate.html">Certificate</a>
-        </div>
-      </div>
+        <div class="topnav">
+            <div class="logo">
+              <a href="index.html">
+                <img class="item" src="images/Adobe Express - file.png" alt="Adobe logo">
+              </a>
+            </div>
+            <div class="nav-links">
+              <a href="#about">About</a>
+              <a href="TechStack.html">Tech Stack</a>
+              <a href="Contact.html">Contact</a>
+              <a class="active" href="Certificate.html">Certificate</a>
+            </div>
+          </div>
     </b>
       <div style="padding-left:70px">  
         <div class="text-container">
