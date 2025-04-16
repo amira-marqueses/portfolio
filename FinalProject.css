@@ -2,7 +2,6 @@
 body {
   color: #f4eaf1;
   padding-top: 50px;
-  font-family: Georgia;
 }
 
 .container {
@@ -31,9 +30,9 @@ body {
 }
 
 .profile-img:hover {
-  transform: scale(1.08); /* smoother zoom */
-  box-shadow: 0 12px 20px rgba(76, 48, 80, 0.4); /* softer shadow */
-  background-color: #a18bd2; /* gentle bg color shift */
+  transform: scale(1.08); 
+  box-shadow: 0 12px 20px rgba(76, 48, 80, 0.4); 
+  background-color: #a18bd2; 
 }
 
 .intro-text h1 {
@@ -130,7 +129,7 @@ body {
     background-color: #f4eaf1;
     border-radius: 18px;
     color: #544f62;
-    transform: scale(1.08); /* smoother zoom */
+    transform: scale(1.08);
   }
   
   .topnav .nav-links a.active {
@@ -140,8 +139,6 @@ body {
   }
 
   @import url(https://fonts.googleapis.com/css?family=Exo:100);
-  /* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-  /* Animations */
   @-webkit-keyframes bg-scrolling-reverse {
     100% {
       background-position: 50px 50px;
@@ -183,10 +180,8 @@ body {
     }
   }
   
-  /* Main styles */
   body {
     color: #000000;
-    /* img size is 50x50 */
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
     -webkit-animation: bg-scrolling-reverse 5s infinite;
     /* Safari 4+ */
@@ -205,7 +200,7 @@ body {
   }
 
   body {
-    background-color: #f0e7e5; /* background color you want */
+    background-color: #f0e7e5; 
     background-image:
       linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
@@ -232,8 +227,8 @@ body {
   }
 
   .text-container {
-    background-color: #d5cfe1; /* White background */
-    border-radius: 10px; /* Optional: Rounds the corners */
+    background-color: #d5cfe1; 
+    border-radius: 10px; 
     max-width: 40%;
     padding: 40px;
     margin-top: 2%;
@@ -246,22 +241,22 @@ body {
   .text-container:hover{
     background-color:#E1DDE9;
     color: #544f62;
-    transform: scale(1.01); /* smoother zoom */
+    transform: scale(1.01); 
   }
 
   .aboutme-container img:hover{
     background-color:#E1DDE9;
     color: #544f62;
-    transform: scale(1.03); /* smoother zoom */
+    transform: scale(1.03); 
     
   }
 
   .text-container1 {
-    background-color: #d5cfe1; /* White background */
-    border-radius: 10px; /* Optional: Rounds the corners */
-    box-shadow: 20px 20px 0 #544f62; /* Optional: Adds a slight shadow */
+    background-color: #d5cfe1; 
+    border-radius: 10px; 
+    box-shadow: 20px 20px 0 #544f62; 
     max-width: 85%;
-    padding: 10px 20px; /* Adjusts space inside */
+    padding: 10px 20px; 
     margin-top: -70px;
     margin-left: 90px;
     align-items: center;
@@ -273,7 +268,7 @@ body {
   .text-container1:hover{
     background-color:#E1DDE9;
     color: #544f62;
-    transform: scale(1.01); /* smoother zoom */
+    transform: scale(1.01);
   }
 
   .certificate-container{
@@ -315,36 +310,37 @@ body {
   .text-container2:hover{
     background-color:#E1DDE9;
     color: #544f62;
-    transform: scale(1.01); /* smoother zoom */
+    transform: scale(1.01); 
   }
 
   .skills {
     font-size: 40px;
-    font-family: Georgia;
-    margin-top: 10px;
+    font-family: "National Park";
+    margin-top: 0.2rem;
     align-items: center;
     padding: 50px 0px;
     text-align: center;
-    font-family: Georgia;
     color: #544f62;
+    margin-bottom: -1.5rem;
   }
 
   .picture-container {
-    padding: 0.94rem;
-    margin-top: 3%;
+    padding: 0.95rem;
+    margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 1.9rem;
+    margin-top: -0.1rem;
   }
 
   .circle-container {
-      width: 300px;
-      height: 300px;
-      background-color: #c8bfe7; /* light purple */
-      border-radius: 50%; /* makes it a perfect circle */
+      width: 250px;
+      height: 250px;
+      background-color: #c8bfe7;
+      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -376,15 +372,15 @@ body {
   .tooltip-text {
     visibility: hidden;
     width: 140px;
-    background-color: #c9c3de; /* tooltip background */
+    background-color: #c9c3de;
     color: #544f62;
     text-align: center;
     border-radius: 8px;
     padding: 8px;
     position: absolute;
     z-index: 1;
-    top: 115%; /* ✅ Add this line */
-    transform: translateX(-50%); /* position above the image */
+    top: 115%; 
+    transform: translateX(-50%); 
     left: 50%;
     transition: opacity 0.3s ease;
     font-size: 1.2rem;
@@ -399,13 +395,14 @@ body {
   .contact-container {
     padding: 40px;
     margin: 5px 2px;
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
+    margin-bottom: 10px;
   }
 
   .contact-container img {
@@ -413,3 +410,85 @@ body {
     height: 80px;
     padding: 10px;
   }
+
+  .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  .contact-form {
+    background-color: #d7d0e6;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 0 #4a4458;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .contact-form h2 {
+    text-align: center;
+    color: #4a4458;
+    margin-bottom: 20px;
+    font-family: "Bree Serif";;
+    font-size: 2.5rem;
+  }
+  
+  .input-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .input-row label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: "Bree Serif";
+    color: #4a4458;
+  }
+
+  .input-row input {
+    height: 50%;
+    font-size: 1.0rem;
+    font-family: "National Park";
+  }
+  
+  .message-area textarea {
+    width: 96%;
+    height: 150px;
+    padding: 10px;
+    resize: vertical;
+    font-family: "National Park";
+    font-size: 1.1rem;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4a4458;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.3rem;
+    font-family: "Bree Serif";
+  }
+  
+  button:hover {
+    background-color: #332e3e;
+  }
+  
+  @media (max-width: 600px) {
+    .input-row {
+      flex-direction: column;
+    }
+  }
+
+
+
