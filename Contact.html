@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="FinalProject.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
      <title>Contact Me</title>
      <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png">
   </head>
@@ -16,7 +17,8 @@
             <img class="item" src="images/logo.png" alt="Adobe logo">
           </a>
         </div>
-        <div class="nav-links">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-links" id="navLinks">
             <a href="AboutMe.html">About</a>
             <a href="TechStack.html">Tech Stack</a>
             <a href="Certificate.html">Certificate</a>
@@ -48,5 +50,11 @@
             <button type="submit">Send</button>
           </form>
         </div>
-</head>
+      <script>
+        function toggleMenu() {
+          var nav = document.getElementById("navLinks");
+          nav.classList.toggle("show");
+        }
+      </script>
+  </body>
 </html>

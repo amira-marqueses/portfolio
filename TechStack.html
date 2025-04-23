@@ -17,7 +17,8 @@
                 <img class="item" src="images/logo.png" alt="Adobe logo">
               </a>
             </div>
-            <div class="nav-links">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="nav-links" id="navLinks">
                 <a href="AboutMe.html">About</a>
                 <a class="active" href="TechStack.html">Tech Stack</a>
                 <a href="Certificate.html">Certificate</a>
@@ -77,6 +78,12 @@
             <img src="images/netbeans.png" class="circle-container">
             <div class="tooltip-text">Apache Netbeans</div>
         </div>
-    </div>   
-</head>
+    </div>
+    <script>
+        function toggleMenu() {
+          var nav = document.getElementById("navLinks");
+          nav.classList.toggle("show");
+        }
+      </script>
+  </body>   
 </html>
