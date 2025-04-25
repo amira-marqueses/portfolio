@@ -102,13 +102,13 @@ body {
     padding: 10px 20px;
     font-family: "Vollkorn";
     z-index: 1000;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
   
   .topnav .logo img {
     width: 60px;
     height: auto;
-    transform: translateX(50px);
+    margin-left: 15px;
   }
   
   .topnav .nav-links {
@@ -142,9 +142,8 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: #f4eaf1;
-    margin-left: 80%;
-    padding: 10px;
-    z-index: 1001;
+    margin-left: 0;
+    padding: 10px 25px;
   }
 
   @import url(https://fonts.googleapis.com/css?family=Exo:100);
@@ -567,6 +566,10 @@ body {
       gap: 1.5rem;
       margin: -50px;
     }
+
+    .nav-links{
+      margin-left: 50%;
+    }
   }
 
   @media (max-width: 768px) {
@@ -687,32 +690,45 @@ body {
     .nav-links {
       display: none;
       flex-direction: column;
-      background-color: #9c93b5;
+      background-color: #f0e7e5;
       position: absolute;
-      top: 50%;
-      left: 0;
-      width: 20%;
+      top: 70px;
+      right: 15px;
+      width: 130px;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 18px;
+      padding: 0px 0;
+      border: 2px solid #3b2f42;
     }
-
+  
     .nav-links.show {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transform: translateX(100px);       
-      font-size: 1.5rem;
-      height: auto;
-      width: 150px;
+      gap: 5px;      
+    }
+  
+    .hamburger {
+      display: block;
+      margin-right: 20px;
+      max-width: 70%;
+      width: 30px;
     }
 
-    .hamburger {
-      display: inline-block;
-      max-width: 60%;
-      width: 40px;
-      min-width: 40%;
+    .menu .hamburger{
+      display: block;
+      margin-right: 20px;
+      max-width: 70%;
+      width: 70px;
+    }
+
+    .topnav .nav-links a {
+      color:#3b2f42;     
+      font-size: 0.9rem;
+      height: 20px;
+    }
+
+    .topnav .nav-links a.active {
+      background-color: #bbaad0;
+      color:#3b2f42;
     }
   }
 
-  
