@@ -2,6 +2,7 @@
 body {
   color: #f4eaf1;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container {
@@ -334,7 +335,8 @@ body {
     font-family: "National Park";
     margin-top: 0.2rem;
     align-items: center;
-    padding: 50px 0px;
+    padding-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
     color: #544f62;
     margin-bottom: -1.5rem;
@@ -350,6 +352,7 @@ body {
     flex-direction: row;
     gap: 1.9rem;
     margin-top: -0.1rem;
+    padding-bottom: 50px;
   }
 
   .circle-container {
@@ -443,8 +446,7 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
-  
-  /* Header */
+
   .contact-form h2 {
     text-align: center;
     color: #4a4458;
@@ -507,6 +509,11 @@ body {
       width: 70%;
     }
 
+    .profile-section{
+      margin-top: -80px;
+      flex-direction: column;
+    }
+
     .text-container1 {
       padding: 20px;
       font-size: 1rem;
@@ -521,7 +528,8 @@ body {
       align-items: center;
       display: flex;
       flex-direction: column;
-      margin: 0 auto;
+      margin: 0 0;
+      padding: 15px 20px;
     }
 
     .btn-group {
@@ -529,13 +537,16 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      margin-top: -40px;
+      gap: 10px;
+      font-size: 11px;
       margin-left: 20px;
-      gap: 20px;
     }
   
     .profile-img {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
     }
   
     .circle-container {
@@ -545,6 +556,7 @@ body {
 
     .intro-text{
       text-align: center;
+      padding-top: -15px;
     }
 
     .aboutme-container img{
@@ -560,15 +572,21 @@ body {
 
     .certificate-container {
       padding: 50px 0;
+      padding-bottom: 50px;
     }
 
     .aboutme-container {
       gap: 1.5rem;
       margin: -50px;
+      padding-bottom: 50px;
     }
 
     .nav-links{
       margin-left: 50%;
+    }
+
+    .form-container{
+      padding-bottom: 50px;
     }
   }
 
@@ -586,6 +604,7 @@ body {
     align-items: center;
     padding: 0px 0;
     margin: 10px auto;
+    padding-bottom: 50px;
 
   }
 
@@ -647,6 +666,19 @@ body {
   .aboutme-container img {
     margin-top: 5%;
   }
+
+  .tooltip-text {
+    visibility: visible;
+    width: 120px;
+    transform: translateX(-50%); 
+    top: 80%; 
+    left: 50%;
+    font-size: 1.0rem;
+  }
+
+  .tooltip-container{
+    padding-bottom: 20px;
+  }
   }
 
   @media (max-width: 600px) {
@@ -659,10 +691,21 @@ body {
       padding: 0 auto;
     }
 
-    .btn-group{
-      align-items:center ;
+  }
+
+  @media (max-width: 660px) {
+    .intro-text h1 {
+      font-size: 2.0rem;
+      margin-top: -15px;
+    }
+    
+    .intro-text h2 {
+      font-size: 1.5rem;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
   }
+
 
   @media (max-width: 480px) {
 
@@ -683,6 +726,19 @@ body {
   
     .text-container2 img {
       margin: 0 0 15px 0;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .intro-text h1 {
+      font-size: 1.8rem;
+      margin-top: -15px;
+    }
+    
+    .intro-text h2 {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
   }
 
@@ -730,5 +786,6 @@ body {
       background-color: #bbaad0;
       color:#3b2f42;
     }
+
   }
 

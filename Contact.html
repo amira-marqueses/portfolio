@@ -45,7 +45,7 @@
               <label>Email: <input type="email" name="email" /></label>
             </div>
             <div class="message-area">
-              <textarea rows="10" cols="80" placeholder="Write a message"></textarea>
+              <textarea rows="10" cols="80" name="message" placeholder="Write a message"></textarea>
             </div>
             <button type="submit">Send</button>
          </form>
@@ -59,8 +59,8 @@
       <script>
         document.querySelector(".contact-form").addEventListener("submit", function (e) {
           setTimeout(() => {
-            this.reset(); // reset form fields after a short delay
-          }, 500); // wait a bit to allow the submission to complete
+            this.reset();
+          }, 500);
         });
       </script>
   </body>
