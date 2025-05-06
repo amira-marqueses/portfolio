@@ -2,7 +2,30 @@
 body {
   color: #f4eaf1;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 50px;    
+  color: #000000;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 5s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 5s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 5s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 5s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  padding-top: 50px; 
+  background-color: #f0e7e5; 
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: bg-scrolling-reverse 5s linear infinite;
+  padding-top: 50px;
+
 }
 
 .container {
@@ -188,35 +211,7 @@ body {
       background-position: 50px 50px;
     }
   }
-  
-  body {
-    color: #000000;
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-    -webkit-animation: bg-scrolling-reverse 5s infinite;
-    /* Safari 4+ */
-    -moz-animation: bg-scrolling-reverse 5s infinite;
-    /* Fx 5+ */
-    -o-animation: bg-scrolling-reverse 5s infinite;
-    /* Opera 12+ */
-    animation: bg-scrolling-reverse 5s infinite;
-    /* IE 10+ */
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
-  
-    padding-top: 50px
-  }
-
-  body {
-    background-color: #f0e7e5; 
-    background-image:
-      linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: bg-scrolling-reverse 5s linear infinite;
-    padding-top: 50px;
-  }
+ 
   .aboutme-container{
     display: flex;
     align-items: center;
