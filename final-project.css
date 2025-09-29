@@ -131,18 +131,25 @@ body {
   font-size: 3.5rem;
 }
 
+.btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; 
+  gap: 15px;
+}
+
 .btn-group button {
   background-color: #9c93b5;
   border-radius: 28px;
   color: #e1dee9;
   padding: 15px 24px;
   cursor: pointer;
-  width: 190px;
+  width: 250px;
   display: inline-block;
-  font-family: "Vollkron";
-  font-size: 180%;
+  font-family: "Vollkorn";
+  font-size: 157%;
   border: 5px;
-  margin: 20px 15px;
+  margin: 15px 10px;
   margin-top: 30px;
   align-items: center;
   justify-content: center;
@@ -504,6 +511,96 @@ button {
 
 button:hover {
   background-color: #332e3e;
+}
+
+.project-container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.text-containerproj {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;  
+  background-color: #d5cfe1;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 20px 20px 0 #544f62;
+  max-width: 700px;
+  width: 100%;
+  color: #544f62;
+  position: relative;
+  padding-bottom: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.text-containerproj-text {  
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "National Park", serif;
+  font-size: 20px;
+  margin: 3px 0;
+  color: #544f62;
+}
+
+.text-containerproj h2{  
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  font-family: "National Park";
+  margin: 5px 0 10px 0; 
+  font-size: 35px;
+  color: #544f62;
+}
+
+.text-containerproj img {
+  width: 550px;
+  height: auto;
+  margin: 10px 0 10px 0; 
+  flex-shrink: 0;
+  align-items: center;
+  justify-items: center;
+  border: 7px solid #3b2f42; 
+  border-radius: 15px; 
+}
+
+.text-containerproj img:hover {
+  background-color: #e1dde9;
+  transform: scale(1.08);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.text-containerproj:hover {
+  background-color: #e1dde9;
+  transform: scale(1.01);
+}
+
+.project-type {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 30px;
+  font-family: "National Park", serif;
+  font-size: 20px;
+  margin: 2px 0 2px 0;
+}
+
+.project-type h3 {
+  background-color: #bbaad0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 1px;
+  box-shadow: 5px 5px 0 #544f62;
+}
+
+.project-type h3:hover { 
+  background-color: #c8bfe7;
+  transform: scale(1.08);
 }
 
 @media (max-width: 1024px) {
