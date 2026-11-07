@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="final-project.css" />
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png" />
     <title>Amira Rachel Marqueses | My Projects</title>
@@ -22,39 +25,237 @@
         <a href="about-me.html">About</a>
         <a class="active" href="projects.html">Projects</a>
         <a href="tech-stack.html">Tech Stack</a>
+        <a href="achievements.html">Achievements</a>
         <a href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
+
     <h1 class="center">My Projects</h1>
-    <div class="project-container">
-      <div class="text-containerproj">
-        <img src="images/SDCAmpusSpace.jpg" alt="SDCAmpusSpace" />
-        <div class="text-containerproj-text">
-          <h2>SDCAmpusSpace</h2>
-          <p>SDCAmpusSpace is a mobile application designed for students of St. Dominic College of Asia. It allows users to view available and occupied rooms, check upcoming events, and browse scheduled seminars. Students can also fill out and submit reservation forms for specific rooms and dates. 
-            Additionally, the app provides access to surveys, making campus activities more organized and accessible in one platform.</p>
+
+    <nav class="achievements-tabs" aria-label="Project categories">
+      <a href="#iot-project">IoT Project</a>
+      <a href="#capstone-project">Capstone Project</a>
+      <a href="#third-year-course-projects">Third-Year Course Projects</a>
+    </nav>
+
+    <div class="achievements-page">
+      <section class="achievement-category" id="iot-project">
+        <h2 class="achievement-category-title">IoT Project</h2>
+        <div class="project-container">
+          <div
+            class="text-containerproj project-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="DC Space IoT project details"
+          >
+            <img src="images/dc-space-architecture.png" alt="DC Space IoT project interface collage" />
+            <h2>DC Space</h2>
+            <p class="project-subtitle">
+              A Web-Based IoT Event Attendance Monitoring System Using RFID Technology with Real-Time Monitoring
+            </p>
+            <div class="project-details">
+              <div class="project-details-inner">
+                <p>
+                  <strong>Description:</strong> DC Space is an IoT attendance system for seminars and campus events at St.
+                  Dominic College of Asia. Participants tap RFID-enabled ID cards on a USB reader, and attendance is recorded,
+                  stored, and shown in real time on a web dashboard—replacing slow, error-prone manual sign-in sheets.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Build an RFID scanning node for student/faculty check-in; store and sync records
+                  in the cloud; provide a live attendance dashboard; support analytics and historical logs; and evaluate the
+                  prototype for functionality, reliability, efficiency, and usability.
+                </p>
+                <p>
+                  <strong>Technologies / Components:</strong> USB 13.56 MHz RFID reader, institutional RFID ID cards,
+                  computer/laptop, Wi-Fi; Next.js, React, TypeScript, Tailwind CSS, Node.js, NextAuth.js, MongoDB.
+                </p>
+                <p>
+                  <strong>My Role / Contribution:</strong> Contributed to the project documentation, including sections on
+                  project scope and limitations, system components, communication and networking, planning and development,
+                  hardware setup, and system performance.
+                </p>
+                <p>
+                  <strong>Project Output / Result:</strong> A working prototype that passed functional, integration, and
+                  validation tests (RFID tap-in/out, login, attendance logs, and database sync). Real-time dashboard updates
+                  performed reliably in controlled testing; full live-event deployment is recommended as future work.
+                </p>
+                <div class="project-type">
+                  <h3>RFID</h3>
+                  <h3>Next.js</h3>
+                  <h3>Node.js</h3>
+                  <h3>MongoDB</h3>
+                </div>
+                <a class="project-doc-link" href="certificates/DC_Space_IoT_Project.pdf" target="_blank" rel="noopener noreferrer">
+                  View Full Documentation
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="project-type">
-          <h3>XML</h3>
-          <h3>Java</h3>
-          <h3>Android Studio</h3>
-        </div>    
-      </div>
-      <div class="text-containerproj">
-        <img src="images/purple_bean.jpg" alt="Purble Bean" />
-        <div class="text-containerproj-text">
-          <h2>Purple Bean Coffee Shop Menu</h2>
-          <p>Purple Bean Coffee Shop Menu is a mobile application where customers can browse different categories like coffee, pastries, and snacks. 
-            Users can easily add items to their cart, and the app will automatically display a summary of their order along with the total price. This makes ordering quick, convenient, and organized. </p>
-        </div>    
-        <div class="project-type">
-          <h3>XML</h3>
-          <h3>Java</h3>
-          <h3>Android Studio</h3>
+      </section>
+
+      <section class="achievement-category" id="capstone-project">
+        <h2 class="achievement-category-title">Capstone Project</h2>
+        <div class="project-container">
+          <div
+            class="text-containerproj project-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="DC SPACE Capstone project details"
+          >
+            <div class="project-carousel" data-carousel>
+              <div class="project-carousel-frame">
+                <img
+                  class="project-carousel-image"
+                  src="images/dc-space-capstone.png"
+                  alt="DC SPACE Capstone project interface collage"
+                />
+              </div>
+              <button type="button" class="project-carousel-btn project-carousel-prev" aria-label="Previous image">
+                <span aria-hidden="true">&lsaquo;</span>
+              </button>
+              <button type="button" class="project-carousel-btn project-carousel-next" aria-label="Next image">
+                <span aria-hidden="true">&rsaquo;</span>
+              </button>
+              <div class="project-carousel-dots" aria-hidden="true"></div>
+            </div>
+            <h2>DC SPACE</h2>
+            <p class="project-subtitle">
+              AI-driven Event Intelligence Platform for Predictive Crowd Management and Adaptive Event Optimization
+            </p>
+            <div class="project-details">
+              <div class="project-details-inner">
+                <p>
+                  <strong>Description:</strong> DC SPACE is a web-based capstone platform for academic and campus events at St.
+                  Dominic College of Asia. It unifies event browsing and registration, RFID tap-in/tap-out attendance, security
+                  monitoring against proxy or invalid scans, AI-assisted crowd and attendance insights, automated digital
+                  certificates, feedback collection, and AI-assisted event reporting—replacing manual sign-in sheets and
+                  disconnected certificate workflows.
+                </p>
+                <p>
+                  <strong>Objectives:</strong> Build event management and participant engagement features; implement RFID
+                  attendance with real-time logs and security checks; develop AI event intelligence for predicted attendance,
+                  flow, and congestion insights; automate certificate and report generation from validated attendance; and
+                  evaluate the system for functionality, usability, efficiency, reliability, accuracy, and satisfaction.
+                </p>
+                <p>
+                  <strong>Technologies / Components:</strong> USB 13.56 MHz RFID reader, institutional RFID IDs; JavaScript,
+                  HTML/CSS, Next.js, Tailwind CSS, MongoDB, Vercel, Google Gemini API; optional ESP32 testing hardware; planned
+                  integration with iRoomReserve for venue reservation data.
+                </p>
+                <p>
+                  <strong>My Role / Contribution:</strong> Backend developer of the system.
+                </p>
+                <p>
+                  <strong>Project Output / Result:</strong> A developed platform covering event lifecycle management, RFID
+                  attendance monitoring, certificate handling, feedback, and AI-supported analytics/reporting, with evaluation
+                  planned across end-users and IT experts using software quality characteristics (functionality, performance,
+                  usability, reliability, security, and more).
+                </p>
+                <div class="project-type">
+                  <h3>Next.js</h3>
+                  <h3>RFID</h3>
+                  <h3>MongoDB</h3>
+                  <h3>Gemini AI</h3>
+                </div>
+                <a class="project-doc-link" href="certificates/DC_Space_Capstone.pdf" target="_blank" rel="noopener noreferrer">
+                  View Full Documentation
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="achievement-category" id="third-year-course-projects">
+        <h2 class="achievement-category-title">Course Projects</h2>
+        <div class="project-container">
+          <div
+            class="text-containerproj project-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="SDCAmpusSpace project details"
+          >
+            <img src="images/SDCAmpusSpace.jpg" alt="SDCAmpusSpace" />
+            <h2>SDCAmpusSpace</h2>
+            <div class="project-details">
+              <div class="project-details-inner">
+                <p>
+                  SDCAmpusSpace is a mobile application designed for students of St. Dominic College of Asia. It allows users to
+                  view available and occupied rooms, check upcoming events, and browse scheduled seminars. Students can also fill
+                  out and submit reservation forms for specific rooms and dates. Additionally, the app provides access to surveys,
+                  making campus activities more organized and accessible in one platform.
+                </p>
+                <div class="project-type">
+                  <h3>XML</h3>
+                  <h3>Java</h3>
+                  <h3>Android Studio</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-containerproj project-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="Purple Bean Coffee Shop Menu project details"
+          >
+            <img src="images/purple_bean.jpg" alt="Purple Bean" />
+            <h2>Purple Bean Coffee Shop Menu</h2>
+            <div class="project-details">
+              <div class="project-details-inner">
+                <p>
+                  Purple Bean Coffee Shop Menu is a mobile application where customers can browse different categories like
+                  coffee, pastries, and snacks. Users can easily add items to their cart, and the app will automatically display a
+                  summary of their order along with the total price. This makes ordering quick, convenient, and organized.
+                </p>
+                <div class="project-type">
+                  <h3>XML</h3>
+                  <h3>Java</h3>
+                  <h3>Android Studio</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-containerproj project-card"
+            tabindex="0"
+            role="button"
+            aria-expanded="false"
+            aria-label="SDCanteen project details"
+          >
+            <img src="images/sdcanteen.png" alt="SDCanteen" />
+            <h2>SDCanteen</h2>
+            <div class="project-details">
+              <div class="project-details-inner">
+                <p>
+                  SDCanteen is a smart canteen menu and ordering system built for St. Dominic College of Asia – Digital Campus.
+                  It helps students and faculty view the day’s updated menu online, place orders ahead of time, and pick up their
+                  food when ready—reducing long queues, order mix-ups, and waiting during busy hours. Canteen staff can manage
+                  incoming orders more clearly through a digital workflow, while users track order status in real time. Access is
+                  limited to SDCA accounts for security, payment is handled online via QR code, and the system is designed for
+                  on-campus pick-up rather than delivery.
+                </p>
+                <div class="project-type">
+                  <h3>Dart</h3>
+                  <h3>Flutter</h3>
+                  <h3>Node.js</h3>
+                  <h3>MongoDB</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

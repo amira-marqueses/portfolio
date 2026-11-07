@@ -524,10 +524,10 @@ button:hover {
 
 .text-containerproj {
   display: flex;
-  flex-direction: column; 
-  align-items: center;  
+  flex-direction: column;
+  align-items: center;
   background-color: #d5cfe1;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 25px;
   box-shadow: 20px 20px 0 #544f62;
   max-width: 700px;
@@ -535,10 +535,10 @@ button:hover {
   color: #544f62;
   position: relative;
   padding-bottom: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.text-containerproj-text {  
+.text-containerproj-text {
   display: grid;
   flex-direction: column;
   justify-content: center;
@@ -548,41 +548,30 @@ button:hover {
   color: #544f62;
 }
 
-.text-containerproj h2{  
+.text-containerproj h2 {
   display: grid;
   text-align: center;
   justify-content: center;
   font-family: "National Park";
-  margin: 5px 0 10px 0; 
+  margin: 5px 0 10px 0;
   font-size: 35px;
   color: #544f62;
 }
 
 .text-containerproj img {
   width: 550px;
+  max-width: 100%;
   height: auto;
-  margin: 10px 0 10px 0; 
+  margin: 10px 0 10px 0;
   flex-shrink: 0;
-  align-items: center;
-  justify-items: center;
-  border: 7px solid #3b2f42; 
-  border-radius: 15px; 
-}
-
-.text-containerproj img:hover {
-  background-color: #e1dde9;
-  transform: scale(1.08);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.text-containerproj:hover {
-  background-color: #e1dde9;
-  transform: scale(1.01);
+  border: 7px solid #3b2f42;
+  border-radius: 15px;
 }
 
 .project-type {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   font-family: "National Park", serif;
@@ -598,9 +587,220 @@ button:hover {
   box-shadow: 5px 5px 0 #544f62;
 }
 
-.project-type h3:hover { 
-  background-color: #c8bfe7;
-  transform: scale(1.08);
+/* Project image carousel */
+.project-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "prev frame next"
+    "dots dots dots";
+  align-items: center;
+  column-gap: 0.65rem;
+  row-gap: 0.65rem;
+}
+
+.project-carousel-frame {
+  grid-area: frame;
+  width: 100%;
+  border: 7px solid #3b2f42;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #c8bfe7;
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-carousel-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  object-fit: cover;
+  display: block;
+}
+
+.project-carousel-btn,
+.project-carousel-btn:hover {
+  box-sizing: border-box;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background: #4f3d6b;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(59, 47, 66, 0.25);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-carousel-btn span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  text-align: center;
+  transform: translateY(-0.05em);
+}
+
+.project-carousel-btn:hover {
+  background: #3b2f42 !important;
+  transform: scale(1.05);
+}
+
+.project-carousel-prev {
+  grid-area: prev;
+}
+
+.project-carousel-next {
+  grid-area: next;
+}
+
+.project-carousel-dots {
+  grid-area: dots;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.project-carousel-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(84, 79, 98, 0.35);
+  cursor: pointer;
+}
+
+.project-carousel-dot.is-active {
+  background: #4f3d6b;
+}
+
+/* Floating expandable project cards */
+.project-card {
+  cursor: pointer;
+  box-shadow:
+    0 10px 24px rgba(59, 47, 66, 0.16),
+    0 2px 6px rgba(59, 47, 66, 0.08),
+    14px 14px 0 #544f62;
+}
+
+.project-card:hover {
+  background-color: #e1dde9;
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 34px rgba(59, 47, 66, 0.2),
+    0 4px 10px rgba(59, 47, 66, 0.1),
+    14px 18px 0 #544f62;
+}
+
+.project-card:focus-visible {
+  outline: 2px solid #9c93b5;
+  outline-offset: 4px;
+}
+
+.project-card .project-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  width: 100%;
+  overflow: hidden;
+  transition:
+    grid-template-rows 0.35s ease,
+    opacity 0.28s ease,
+    margin-top 0.28s ease;
+  margin-top: 0;
+}
+
+.project-card .project-details-inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.project-card .project-details p {
+  margin: 0;
+  font-family: "National Park", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  text-align: center;
+  color: #544f62;
+}
+
+.project-card .project-details .project-type {
+  margin-top: 1rem;
+}
+
+.project-card .project-subtitle {
+  font-family: "Vollkorn", serif;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  font-style: italic;
+  color: #7d7399;
+  text-align: center;
+  max-width: 36rem;
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
+.project-card h2 {
+  margin-bottom: 0.15rem;
+}
+
+.project-card .project-details p {
+  margin-bottom: 0.75rem;
+  text-align: left;
+}
+
+.project-card .project-doc-link {
+  display: block;
+  width: fit-content;
+  margin: 0.85rem auto 0;
+  padding: 8px 22px;
+  background-color: #4f3d6b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: "Bree Serif", serif;
+  font-size: 1.05rem;
+  text-align: center;
+  transition: background-color 0.25s ease;
+}
+
+.project-card .project-doc-link:hover {
+  background-color: #3b2f42;
+}
+
+.project-card.is-open {
+  background-color: #e1dde9;
+  transform: translateY(-4px);
+}
+
+.project-card.is-open .project-details {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -955,5 +1155,432 @@ button:hover {
 
   .project-container h3 {
     font-size: 15px;
+  }
+}
+
+/* ===== Home page ===== */
+body.page-home {
+  --home-ink: #2f2940;
+  --home-muted: #5f5670;
+  --home-lavender: #9c93b5;
+  --home-lavender-deep: #7d7399;
+  --home-blush: #f0e7e5;
+  --home-cream: #f7f1ef;
+  --home-ring: #c8bfe7;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  color: var(--home-ink);
+  background-color: var(--home-cream);
+  background-image:
+    radial-gradient(ellipse 70% 55% at 12% 40%, rgba(156, 147, 181, 0.22), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 88% 70%, rgba(212, 196, 214, 0.28), transparent 55%),
+    linear-gradient(to right, rgba(84, 79, 98, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(84, 79, 98, 0.07) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  animation: home-grid-drift 28s linear infinite;
+  overflow-x: hidden;
+}
+
+@keyframes home-grid-drift {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 0 0, 48px 48px, 48px 48px;
+  }
+}
+
+@keyframes home-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes home-portrait-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-home .home-atmosphere {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(247, 241, 239, 0.35) 0%, transparent 28%, transparent 72%, rgba(240, 231, 229, 0.55) 100%);
+  z-index: 0;
+}
+
+.page-home .home-hero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(280px, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+  box-sizing: border-box;
+}
+
+.page-home .home-portrait {
+  display: flex;
+  justify-content: center;
+  animation: home-portrait-in 0.9s ease both;
+}
+
+.page-home .home-portrait-ring {
+  position: relative;
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 0.7rem;
+  background: linear-gradient(145deg, #d5cfe1 0%, var(--home-lavender) 48%, #bbaad0 100%);
+  box-shadow:
+    0 0 0 10px rgba(200, 191, 231, 0.35),
+    18px 22px 0 rgba(84, 79, 98, 0.12);
+}
+
+.page-home .home-portrait-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: var(--home-ring);
+  transition: transform 0.45s ease;
+}
+
+.page-home .home-portrait-ring:hover .home-portrait-img {
+  transform: scale(1.03);
+}
+
+.page-home .home-copy {
+  max-width: 34rem;
+  animation: home-rise 0.85s ease 0.12s both;
+}
+
+.page-home .home-greeting {
+  margin: 0 0 0.35rem;
+  font-family: "Vollkorn", serif;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-style: italic;
+  color: var(--home-lavender-deep);
+  letter-spacing: 0.02em;
+}
+
+.page-home .home-name {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(2.75rem, 6vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--home-ink);
+}
+
+.page-home .home-role {
+  margin: 0.85rem 0 0;
+  font-family: "National Park", sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  font-weight: 500;
+  color: var(--home-muted);
+}
+
+.page-home .home-lede {
+  margin: 1.15rem 0 0;
+  max-width: 34ch;
+  font-family: "National Park", sans-serif;
+  font-size: clamp(1rem, 1.7vw, 1.12rem);
+  line-height: 1.65;
+  color: var(--home-muted);
+}
+
+.page-home .home-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+  max-width: 26rem;
+  animation: home-rise 0.85s ease 0.28s both;
+}
+
+.page-home .home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 2.85rem;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  text-decoration: none;
+  font-family: "Vollkorn", serif;
+  font-size: 1.02rem;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    border-color 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.page-home .home-btn-primary,
+.page-home .home-btn-secondary {
+  background-color: var(--home-lavender);
+  border-color: var(--home-lavender);
+  color: #f7f4fb;
+}
+
+.page-home .home-btn-primary:hover,
+.page-home .home-btn-secondary:hover {
+  background-color: var(--home-lavender-deep);
+  border-color: var(--home-lavender-deep);
+  color: #fff;
+}
+
+.page-home .home-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.55rem 1.15rem;
+  margin-top: 1.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(156, 147, 181, 0.3);
+  animation: home-rise 0.85s ease 0.4s both;
+}
+
+.page-home .home-nav a {
+  font-family: "Vollkorn", serif;
+  font-size: 0.98rem;
+  color: var(--home-muted);
+  text-decoration: none;
+  padding: 0.2rem 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.page-home .home-nav a:hover,
+.page-home .home-nav a:focus {
+  color: var(--home-ink);
+  background: transparent;
+}
+
+.page-home .home-nav a:focus-visible,
+.page-home .home-btn:focus-visible {
+  outline: 2px solid var(--home-lavender);
+  outline-offset: 3px;
+}
+
+@media (max-width: 860px) {
+  .page-home .home-hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    min-height: auto;
+    padding-top: clamp(2.5rem, 8vw, 4rem);
+    padding-bottom: clamp(3rem, 10vw, 5rem);
+  }
+
+  .page-home .home-portrait-ring {
+    width: min(72vw, 280px);
+    box-shadow:
+      0 0 0 8px rgba(200, 191, 231, 0.35),
+      12px 14px 0 rgba(84, 79, 98, 0.12);
+  }
+
+  .page-home .home-copy {
+    max-width: 36rem;
+  }
+
+  .page-home .home-lede {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-home .home-actions {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page-home .home-nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-home .home-actions {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .page-home .home-nav {
+    justify-content: center;
+    gap: 0.55rem 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.page-home,
+  .page-home .home-copy,
+  .page-home .home-portrait,
+  .page-home .home-actions,
+  .page-home .home-nav {
+    animation: none;
+  }
+}
+
+/* Leadership entries: centered card layout with logo on top */
+.leadership-container {
+  padding-bottom: 50px;
+}
+
+.leadership-container .text-container2 {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 28px 80px;
+}
+
+.leadership-container .text-container2:not(:has(.view-button)) {
+  padding-bottom: 28px;
+}
+
+.leadership-container .leadership-logo {
+  width: min(280px, 85%);
+  height: auto;
+  margin: 0 0 18px 0;
+  flex-shrink: 0;
+  align-self: center;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+.leadership-container .text-container2-text {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.leadership-container .view-button {
+  left: 50%;
+  right: auto;
+  bottom: 24px;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .leadership-container .view-button {
+    position: static;
+    margin-top: 20px;
+    display: inline-block;
+    transform: none;
+  }
+
+  .leadership-container .text-container2 {
+    padding: 22px 18px 22px;
+  }
+
+  .leadership-container .text-container2:has(.view-button) {
+    padding-bottom: 22px;
+  }
+}
+
+/* ===== Achievements page ===== */
+.achievements-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  max-width: 900px;
+  margin: -1rem auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.achievements-tabs a {
+  font-family: "Vollkorn", serif;
+  font-size: 1rem;
+  color: #544f62;
+  text-decoration: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background-color: #d5cfe1;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.achievements-tabs a:hover {
+  background-color: #9c93b5;
+  color: #f7f4fb;
+}
+
+.achievements-page {
+  max-width: 900px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem 2rem;
+}
+
+.achievement-category {
+  margin-bottom: 3rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.achievement-category-title {
+  font-family: "Bree Serif", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #3b2f42;
+  text-align: center;
+  margin: 0 0 1.5rem;
+}
+
+.achievement-empty {
+  font-family: "National Park", sans-serif;
+  font-size: 1.15rem;
+  color: #544f62;
+  text-align: center;
+  background-color: #d5cfe1;
+  border-radius: 10px;
+  box-shadow: 10px 10px 0 #544f62;
+  max-width: 700px;
+  width: 100%;
+  margin: 0;
+  padding: 1.75rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .achievements-tabs {
+    margin-top: 0;
+    gap: 0.55rem 0.65rem;
+  }
+
+  .achievements-tabs a {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .achievement-category {
+    scroll-margin-top: 4.5rem;
   }
 }
