@@ -33,11 +33,37 @@
 
     <h1 class="center">Achievements</h1>
 
-    <nav class="achievements-tabs" aria-label="Achievement categories">
-      <a href="#course-completion">Course Completion</a>
-      <a href="#awards">Awards</a>
-      <a href="#academic-recognition">Academic Recognition</a>
-      <a href="#certificate-of-participation">Certificate of Participation</a>
+    <nav class="achievements-tabs" aria-label="Achievement categories" data-filter-tabs>
+      <button type="button" class="is-active" data-filter="all" aria-pressed="true">
+        <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 6h7v7H4zm9 0h7v4h-7zm0 6h7v6h-7zM4 15h7v3H4z" />
+        </svg>
+        All
+      </button>
+      <button type="button" data-filter="course-completion" aria-pressed="false">
+        <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zm0 12.99L5.06 12.1 12 8.35l6.94 3.75L12 15.99zM5 16.5v2.25L12 22l7-3.25V16.5L12 19.75 5 16.5z" />
+        </svg>
+        Course Completion
+      </button>
+      <button type="button" data-filter="awards" aria-pressed="false">
+        <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2 9.2 8.1 2.5 9l5 4.9L6.2 21 12 17.8 17.8 21l-1.3-7.1 5-4.9-6.7-.9L12 2zm0 4.2 1.3 2.9 3.1.4-2.3 2.2.6 3.2L12 13.5 9.3 15l.6-3.2-2.3-2.2 3.1-.4L12 6.2z" />
+        </svg>
+        Awards
+      </button>
+      <button type="button" data-filter="academic-recognition" aria-pressed="false">
+        <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 12c-4.4 0-8 2.2-8 5v1h16v-1c0-2.8-3.6-5-8-5z" />
+        </svg>
+        Academic Recognition
+      </button>
+      <button type="button" data-filter="certificate-of-participation" aria-pressed="false">
+        <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2.5L17.5 8H14zM8 12h8v1.5H8zm0 3.5h8V17H8zm0-7h5V10H8z" />
+        </svg>
+        Certificate of Participation
+      </button>
     </nav>
 
     <div class="achievements-page">
@@ -137,6 +163,16 @@
               <p>Date: February 2026</p>
             </div>
             <a class="view-button" href="certificates/PCS_MMM_TECHTALKS.pdf" target="_blank">View</a>
+          </div>
+          <div class="text-container2">
+            <img src="images/amira-rachel-participation.png" alt="JPCS Geek Speaks 2026 Certificate of Participation" />
+            <div class="text-container2-text">
+              <h2>JPCS Geek Speaks 2026</h2>
+              <p>Issued by Junior Philippine Computer Society</p>
+              <p>Navigating GitHub · Navigating Cyberspace with a Cybersecure Eye</p>
+              <p>Date: March 21, 2026 · via Zoom</p>
+            </div>
+            <a class="view-button" href="certificates/Amira_Rachel_F_Marqueses_Participation.pdf" target="_blank">View</a>
           </div>
           <div class="text-container2">
             <img src="images/code-hunt-peachpop.png" alt="DominiXode Code Hunt 1st Place Certificate" />

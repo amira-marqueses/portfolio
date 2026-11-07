@@ -68,6 +68,34 @@ function toggleMenu() {
        },
     ];
 
+    document.querySelectorAll("[data-filter-tabs]").forEach((tabs) => {
+       const buttons = tabs.querySelectorAll("[data-filter]");
+       const page = tabs.nextElementSibling;
+       if (!page) return;
+       const categories = page.querySelectorAll(".achievement-category");
+
+       const applyFilter = (filter) => {
+          categories.forEach((section) => {
+             const show = filter === "all" || section.id === filter;
+             section.classList.toggle("is-hidden", !show);
+          });
+
+          buttons.forEach((button) => {
+             const active = button.getAttribute("data-filter") === filter;
+             button.classList.toggle("is-active", active);
+             button.setAttribute("aria-pressed", active ? "true" : "false");
+          });
+       };
+
+       buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+             applyFilter(button.getAttribute("data-filter"));
+          });
+       });
+
+       applyFilter("all");
+    });
+
     document.querySelectorAll("[data-carousel]").forEach((carousel) => {
        const image = carousel.querySelector(".project-carousel-image");
        const prevBtn = carousel.querySelector(".project-carousel-prev");
