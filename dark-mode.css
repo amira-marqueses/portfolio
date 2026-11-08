@@ -507,3 +507,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
 html[data-theme="dark"] .theme-toggle--home {
   box-shadow: 4px 4px 0 #0f0c14;
 }
+
+html[data-theme="dark"] .page-veil {
+  background:
+    linear-gradient(155deg, rgba(255, 255, 255, 0.05) 0%, transparent 46%),
+    linear-gradient(180deg, #1c1726 0%, #14111b 55%, #100e16 100%);
+}

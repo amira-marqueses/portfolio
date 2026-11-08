@@ -4,6 +4,75 @@ function toggleMenu() {
  }
  
  document.addEventListener("DOMContentLoaded", () => {
+    const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const ensurePageVeil = () => {
+       let veil = document.querySelector(".page-veil");
+       if (!veil) {
+          veil = document.createElement("div");
+          veil.className = "page-veil";
+          veil.setAttribute("aria-hidden", "true");
+          document.body.prepend(veil);
+       }
+       return veil;
+    };
+
+    const navigateWithTransition = (url) => {
+       if (reduceMotion) {
+          window.location.href = url;
+          return;
+       }
+       if (document.body.classList.contains("is-page-leaving")) return;
+       ensurePageVeil();
+       document.body.classList.add("is-page-leaving");
+       window.setTimeout(() => {
+          window.location.href = url;
+       }, 340);
+    };
+
+    const isInternalPageLink = (anchor) => {
+       const href = anchor.getAttribute("href");
+       if (!href || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:")) return null;
+       if (anchor.target === "_blank" || anchor.hasAttribute("download")) return null;
+       let dest;
+       try {
+          dest = new URL(href, window.location.href);
+       } catch (e) {
+          return null;
+       }
+       if (dest.origin !== window.location.origin) return null;
+       if (dest.pathname === window.location.pathname && dest.search === window.location.search) return null;
+       return dest.href;
+    };
+
+    if (!reduceMotion) {
+       ensurePageVeil();
+       document.body.classList.add("is-page-entering");
+       window.setTimeout(() => {
+          document.body.classList.remove("is-page-entering");
+       }, 900);
+    }
+
+    document.querySelectorAll(".topnav .nav-links a, .topnav .logo a").forEach((link) => {
+       link.addEventListener("click", (e) => {
+          const url = isInternalPageLink(link);
+          if (!url) return;
+          e.preventDefault();
+          const nav = document.getElementById("navLinks");
+          if (nav) nav.classList.remove("show");
+          navigateWithTransition(url);
+       });
+    });
+
+    document.querySelectorAll(".home-actions a[href]").forEach((link) => {
+       link.addEventListener("click", (e) => {
+          const url = isInternalPageLink(link);
+          if (!url) return;
+          e.preventDefault();
+          navigateWithTransition(url);
+       });
+    });
+
     const form = document.querySelector(".contact-form");
     if (form) {
        form.addEventListener("submit", function (e) {
