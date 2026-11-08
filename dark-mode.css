@@ -376,41 +376,52 @@ html[data-theme="dark"] .amz__item:hover .amz__num {
 
 /* Home page */
 html[data-theme="dark"] body.page-home {
+  --home-ink: #f0ebf7;
+  --home-muted: #b7add1;
+  --home-lavender-deep: #c8bfe7;
+  --home-grid: rgba(200, 191, 231, 0.12);
+  --home-btn-primary: #c8bfe7;
+  --home-btn-primary-ink: #1a1625;
+  --home-btn-secondary: #3a3350;
+  --home-btn-secondary-ink: #f0ebf7;
+  --home-ringtext: rgba(240, 235, 247, 0.88);
   background-color: #1a1625;
+  background-image:
+    linear-gradient(to right, var(--home-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--home-grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
-html[data-theme="dark"] .page-home .home-atmosphere {
-  opacity: 0.55;
-  filter: brightness(0.55) saturate(0.85);
+html[data-theme="dark"] .page-home .home-flora {
+  filter: none;
 }
 
-html[data-theme="dark"] .page-home .home-greeting,
-html[data-theme="dark"] .page-home .home-role,
-html[data-theme="dark"] .page-home .home-lede,
-html[data-theme="dark"] .page-home .home-connect-label {
+html[data-theme="dark"] .page-home .home-flora__mark {
+  opacity: 0.8;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.35)) brightness(1.06) saturate(1.05);
+}
+
+html[data-theme="dark"] .page-home .home-flora--drift .home-flora__mark {
+  opacity: 0.52;
+}
+
+html[data-theme="dark"] .page-home .home-flora--soft .home-flora__mark {
+  opacity: 0.34;
+}
+
+html[data-theme="dark"] .page-home .home-flora--spark .home-flora__mark {
+  opacity: 0.42;
+  filter: brightness(1.06) saturate(1.05);
+}
+
+html[data-theme="dark"] .page-home .home-greeting {
   color: #c8bfe7;
 }
 
-html[data-theme="dark"] .page-home .home-name {
-  color: #f0ebf7;
-}
-
-html[data-theme="dark"] .page-home .home-btn-primary {
-  background: #9c93b5;
-  color: #1a1625;
-}
-
-html[data-theme="dark"] .page-home .home-btn-primary:hover {
-  background: #c8bfe7;
-}
-
-html[data-theme="dark"] .page-home .home-btn-secondary {
-  border-color: rgba(200, 191, 231, 0.4);
-  color: #e8e2f2;
-}
-
-html[data-theme="dark"] .page-home .home-btn-secondary:hover {
-  background: rgba(156, 147, 181, 0.22);
+html[data-theme="dark"] .page-home .home-connect-label {
+  color: #9c93b5;
 }
 
 html[data-theme="dark"] .page-home .home-social {
@@ -419,19 +430,11 @@ html[data-theme="dark"] .page-home .home-social {
   background: rgba(47, 41, 64, 0.7);
 }
 
-html[data-theme="dark"] .page-home .home-portrait-orbit {
-  border-color: rgba(200, 191, 231, 0.28);
-}
-
-html[data-theme="dark"] .page-home .home-portrait-dot {
-  background: #c8bfe7;
-}
-
 html[data-theme="dark"] .page-home .home-portrait-ring {
   background: linear-gradient(145deg, #3a3350 0%, #2f2940 50%, #4a4458 100%);
   box-shadow:
     0 0 0 1px rgba(200, 191, 231, 0.25),
-    0 0 0 14px rgba(156, 147, 181, 0.1),
+    0 0 0 10px rgba(156, 147, 181, 0.12),
     0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
