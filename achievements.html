@@ -6,10 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="final-project.css" />
+    <link rel="stylesheet" href="dark-mode.css" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="site-style.css" />
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png" />
     <title>Amira Rachel Marqueses | Achievements</title>
   </head>
@@ -20,7 +23,7 @@
           <img class="item" src="images/logo.png" alt="Adobe logo" />
         </a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <div class="nav-links" id="navLinks">
         <a href="about-me.html">About</a>
         <a href="projects.html">Projects</a>
@@ -29,11 +32,41 @@
         <a href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
     </div>
 
-    <h1 class="center">Achievements</h1>
+    <main class="site-shell">
+      <div class="site-marquee" aria-hidden="true">
+        <div class="site-marquee__row">
+          <div class="site-marquee__track site-marquee__track--left">
+            <span>Awards · Recognition · Growth ·</span>
+            <span>Awards · Recognition · Growth ·</span>
+          </div>
+        </div>
+        <div class="site-marquee__row site-marquee__row--offset">
+          <div class="site-marquee__track site-marquee__track--right">
+            <span>Course Completion · Participation ·</span>
+            <span>Course Completion · Participation ·</span>
+          </div>
+        </div>
+      </div>
 
-    <nav class="achievements-tabs" aria-label="Achievement categories" data-filter-tabs>
+      <div class="site-shell-inner">
+        <p class="site-label site-fade"><span class="site-label-line" aria-hidden="true"></span>Milestones</p>
+        <h1 class="site-page-title site-fade site-fade-delay-1" aria-label="Achievements">
+          <span class="site-page-title__word site-page-title__word--accent">Achievements</span>
+        </h1>
+
+        <nav class="achievements-tabs site-fade site-fade-delay-2" aria-label="Achievement categories" data-filter-tabs>
       <button type="button" class="is-active" data-filter="all" aria-pressed="true">
         <svg class="tab-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M4 6h7v7H4zm9 0h7v4h-7zm0 6h7v6h-7zM4 15h7v3H4z" />
@@ -64,9 +97,9 @@
         </svg>
         Certificate of Participation
       </button>
-    </nav>
+        </nav>
 
-    <div class="achievements-page">
+        <div class="achievements-page site-fade site-fade-delay-3">
       <section class="achievement-category" id="course-completion">
         <h2 class="achievement-category-title">Course Completion</h2>
         <div class="certificate-container">
@@ -77,16 +110,16 @@
               <p>Issued by Oracle Academy</p>
               <p>Date: December 2024</p>
             </div>
-            <a class="view-button" href="certificates/OracleCertificate.pdf" target="_blank">View</a>
+            <a class="view-button" href="images/cert-java-foundations.jpg" target="_blank">View</a>
           </div>
           <div class="text-container2">
             <img src="images/introduction-to-iot.png" alt="Introduction to IoT Badge" />
             <div class="text-container2-text">
               <h2>Introduction to Internet of Things</h2>
               <p>Issued by Cisco Networking Academy</p>
-              <p>Date: November 2026</p>
+              <p>Date: February 2026</p>
             </div>
-            <a class="view-button" href="certificates/IntrotoIoT.pdf" target="_blank">View</a>
+            <a class="view-button" href="images/cert-intro-to-iot.jpg" target="_blank">View</a>
           </div>
           <div class="text-container2">
             <img src="images/introduction-to-cybersecurity.png" alt="Introduction to Cybersecurity Badge" />
@@ -95,7 +128,7 @@
               <p>Issued by Cisco Networking Academy</p>
               <p>Date: November 2026</p>
             </div>
-            <a class="view-button" href="certificates/IntrotoCybersecurity.pdf" target="_blank">View</a>
+            <a class="view-button" href="images/cert-intro-to-cybersecurity.jpg" target="_blank">View</a>
           </div>
         </div>
       </section>
@@ -165,6 +198,16 @@
             <a class="view-button" href="certificates/PCS_MMM_TECHTALKS.pdf" target="_blank">View</a>
           </div>
           <div class="text-container2">
+            <img src="images/certificate-of-attendance-participation.png" alt="DSDAP Certificate of Participation" />
+            <div class="text-container2-text">
+              <h2>Digital Startup Development and Acceleration Program (DSDAP) Caravan</h2>
+              <p>Issued by DICT Region IV-A (CALABARZON) · ICT Industry Development Bureau</p>
+              <p>Held at St. Dominic College of Asia — Cavite · DRA Hall</p>
+              <p>Date: May 29, 2024</p>
+            </div>
+            <a class="view-button" href="certificates/AMIRA_RACHEL_F_MARQUESES_Certificate_of_Attendance.pdf" target="_blank">View</a>
+          </div>
+          <div class="text-container2">
             <img src="images/amira-rachel-participation.png" alt="JPCS Geek Speaks 2026 Certificate of Participation" />
             <div class="text-container2-text">
               <h2>JPCS Geek Speaks 2026</h2>
@@ -185,7 +228,9 @@
           </div>
         </div>
       </section>
-    </div>
+        </div>
+      </div>
+    </main>
 
     <script src="script.js"></script>
   </body>

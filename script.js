@@ -141,4 +141,151 @@ function toggleMenu() {
 
        showSlide();
     });
+
+    const lightbox = document.createElement("div");
+    lightbox.className = "cert-lightbox";
+    lightbox.hidden = true;
+    lightbox.innerHTML = `
+       <div class="cert-lightbox-backdrop" data-lightbox-close></div>
+       <div class="cert-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Certificate preview">
+          <button type="button" class="cert-lightbox-close" data-lightbox-close aria-label="Close certificate preview">&times;</button>
+          <div class="cert-lightbox-content"></div>
+       </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxContent = lightbox.querySelector(".cert-lightbox-content");
+    let lastFocus = null;
+
+    const isImageFile = (url) => /\.(png|jpe?g|gif|webp|bmp|svg)(\?.*)?$/i.test(url || "");
+    const isPdfFile = (url) => /\.pdf(\?.*)?$/i.test(url || "");
+
+    const closeLightbox = () => {
+       lightbox.hidden = true;
+       document.body.classList.remove("cert-lightbox-open");
+       lightboxContent.innerHTML = "";
+       if (lastFocus && typeof lastFocus.focus === "function") {
+          lastFocus.focus();
+       }
+    };
+
+    const openLightbox = (trigger) => {
+       const href = trigger.getAttribute("href");
+       if (!href) return;
+
+       const card = trigger.closest(".text-container2, .leadership-card, .certificate-item") || trigger.parentElement;
+       const previewImg = card ? card.querySelector("img") : null;
+       const title =
+          (card && (card.querySelector("h2, h3") || {}).textContent) ||
+          trigger.getAttribute("aria-label") ||
+          "Certificate";
+
+       lastFocus = trigger;
+       lightboxContent.innerHTML = "";
+
+       if (isImageFile(href)) {
+          const img = document.createElement("img");
+          img.src = href;
+          img.alt = title.trim();
+          lightboxContent.appendChild(img);
+       } else if (previewImg && previewImg.getAttribute("src") && !isPdfFile(href)) {
+          const img = document.createElement("img");
+          img.src = previewImg.getAttribute("src");
+          img.alt = previewImg.getAttribute("alt") || title.trim();
+          lightboxContent.appendChild(img);
+       } else if (isPdfFile(href)) {
+          const frame = document.createElement("iframe");
+          frame.src = href;
+          frame.title = title.trim();
+          frame.className = "cert-lightbox-pdf";
+          lightboxContent.appendChild(frame);
+       } else {
+          const frame = document.createElement("iframe");
+          frame.src = href;
+          frame.title = title.trim();
+          lightboxContent.appendChild(frame);
+       }
+
+       lightbox.hidden = false;
+       document.body.classList.add("cert-lightbox-open");
+       lightbox.querySelector(".cert-lightbox-close").focus();
+    };
+
+    document.querySelectorAll(".view-button, .leadership-view").forEach((link) => {
+       link.addEventListener("click", (e) => {
+          e.preventDefault();
+          openLightbox(link);
+       });
+    });
+
+    lightbox.addEventListener("click", (e) => {
+       if (e.target.closest("[data-lightbox-close]")) {
+          closeLightbox();
+       }
+    });
+
+    document.addEventListener("keydown", (e) => {
+       if (e.key === "Escape" && !lightbox.hidden) {
+          closeLightbox();
+       }
+    });
+
+    document.querySelectorAll(".site-shell").forEach((shell) => {
+       if ("IntersectionObserver" in window) {
+          const watcher = new IntersectionObserver(
+             (entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                   shell.classList.add("site-shell--play");
+                   watcher.disconnect();
+                }
+             },
+             { threshold: 0.12 }
+          );
+          watcher.observe(shell);
+       } else {
+          shell.classList.add("site-shell--play");
+       }
+    });
+
+    document.querySelectorAll(".amz").forEach((aboutSection) => {
+       if ("IntersectionObserver" in window) {
+          const watcher = new IntersectionObserver(
+             (entries) => {
+                if (entries.some((entry) => entry.isIntersecting)) {
+                   aboutSection.classList.add("amz--play");
+                   watcher.disconnect();
+                }
+             },
+             { threshold: 0.15 }
+          );
+          watcher.observe(aboutSection);
+       } else {
+          aboutSection.classList.add("amz--play");
+       }
+
+       const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+       const zone = aboutSection.querySelector(".amz__tilt-zone");
+       const card = aboutSection.querySelector(".amz__card");
+       const glare = aboutSection.querySelector(".amz__glare");
+
+       if (!reduceMotion && zone && card) {
+          zone.addEventListener("mousemove", (e) => {
+             const rect = zone.getBoundingClientRect();
+             const px = (e.clientX - rect.left) / rect.width;
+             const py = (e.clientY - rect.top) / rect.height;
+             card.style.transition = "transform .12s ease-out";
+             card.style.transform = `rotateX(${(0.5 - py) * 18}deg) rotateY(${(px - 0.5) * 22}deg)`;
+             if (glare) {
+                glare.style.background = `radial-gradient(circle at ${px * 100}% ${py * 100}%, rgba(255,255,255,0.45), rgba(255,255,255,0) 45%)`;
+                glare.style.opacity = "1";
+             }
+          });
+
+          zone.addEventListener("mouseleave", () => {
+             card.style.transition = "transform .7s cubic-bezier(.2,.8,.2,1)";
+             card.style.transform = "rotateX(0deg) rotateY(0deg)";
+             if (glare) glare.style.opacity = "0";
+          });
+       }
+    });
  });

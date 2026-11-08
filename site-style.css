@@ -1,0 +1,231 @@
+/* Shared page styling inspired by the About (amz) section — keeps existing site colors */
+
+.site-shell {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem 0 4rem;
+}
+
+.site-marquee {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-marquee__row {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.site-marquee__row--offset {
+  margin-top: min(42vh, 380px);
+}
+
+.site-marquee__track {
+  display: inline-flex;
+  width: max-content;
+  font-family: "EB Garamond", "Vollkorn", "Bree Serif", serif;
+  font-style: italic;
+  font-size: clamp(4.5rem, 12vw, 9.5rem);
+  line-height: 1.05;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(84, 79, 98, 0.14);
+}
+
+.site-marquee__track span {
+  padding-right: 3.5rem;
+}
+
+.site-marquee__track--left {
+  animation: site-slide-left 60s linear infinite;
+}
+
+.site-marquee__track--right {
+  animation: site-slide-right 70s linear infinite;
+}
+
+.site-shell-inner {
+  position: relative;
+  z-index: 1;
+  width: min(1160px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-label {
+  margin: 0 0 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: "National Park", "Inter", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7d7399;
+}
+
+.site-label-line {
+  width: 2rem;
+  height: 1.5px;
+  background: #b3a5d1;
+}
+
+.site-shell .center,
+.site-page-title {
+  margin: 0 0 1.35rem;
+  font-family: "EB Garamond", "Vollkorn", serif;
+  font-weight: 500;
+  font-size: clamp(46px, 5.6vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  color: #2a2340;
+  text-align: center;
+}
+
+.site-page-title__word {
+  display: inline-block;
+}
+
+.site-page-title__word--accent {
+  font-style: italic;
+  color: #4a3b78;
+}
+
+.site-shell .skills,
+.site-shell .achievement-category-title {
+  font-family: "EB Garamond", "Bree Serif", "Vollkorn", serif;
+  font-weight: 500;
+  color: #544f62;
+}
+
+.site-shell .text-container1,
+.site-shell .text-container2,
+.site-shell .text-containerproj,
+.site-shell .contact-form,
+.site-shell .leadership-card {
+  border: 1px solid rgba(226, 219, 238, 0.95);
+  box-shadow:
+    var(--site-panel-shadow, 14px 14px 0 #544f62),
+    0 24px 48px rgba(84, 79, 98, 0.12);
+}
+
+.site-shell .text-container1 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52rem;
+}
+
+.site-shell .circle-container {
+  border: 6px solid #ffffff;
+  box-shadow: 0 16px 34px rgba(84, 79, 98, 0.16);
+  background-color: #e4ddf0;
+}
+
+.site-shell .circle-container:hover {
+  box-shadow: 0 20px 40px rgba(84, 79, 98, 0.2);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.site-shell .text-container2 img,
+.site-shell .text-containerproj img {
+  border: 6px solid #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 14px 30px rgba(84, 79, 98, 0.14);
+}
+
+.site-shell .achievements-tabs {
+  position: relative;
+  z-index: 1;
+}
+
+.site-shell .amz__item,
+.site-shell .leadership-contrib-list li {
+  transition: padding-left 0.25s ease;
+}
+
+.site-fade {
+  opacity: 0;
+}
+
+.site-shell--play .site-fade {
+  animation: site-fade-up 0.8s ease-out forwards;
+}
+
+.site-shell--play .site-fade-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.site-shell--play .site-fade-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.site-shell--play .site-fade-delay-3 {
+  animation-delay: 0.36s;
+}
+
+@keyframes site-slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes site-slide-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes site-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-shell {
+    padding-top: 0.75rem;
+  }
+
+  .site-marquee__row--offset {
+    margin-top: min(52vh, 520px);
+  }
+
+  .site-marquee__track {
+    font-size: clamp(3.25rem, 18vw, 5.25rem);
+  }
+
+  .site-shell .text-container1 {
+    margin-left: auto;
+    width: 90%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-marquee__track--left,
+  .site-marquee__track--right {
+    animation: none;
+  }
+
+  .site-fade {
+    opacity: 1;
+    animation: none !important;
+  }
+}

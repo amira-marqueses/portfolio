@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="final-project.css" />
+    <link rel="stylesheet" href="dark-mode.css" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="site-style.css" />
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png" />
     <title>Amira Rachel Marqueses | Certification</title>
   </head>
@@ -17,7 +20,7 @@
           <img class="item" src="images/logo.png" alt="Adobe logo" />
         </a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <div class="nav-links" id="navLinks">
         <a href="about-me.html">About</a>
         <a href="projects.html">Projects</a>
@@ -26,9 +29,40 @@
         <a class="active" href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
     </div>
-    <h1 class="center">Certification</h1>
-    <div class="certificate-container">
+
+    <main class="site-shell">
+      <div class="site-marquee" aria-hidden="true">
+        <div class="site-marquee__row">
+          <div class="site-marquee__track site-marquee__track--left">
+            <span>Credentials · Skills · Certified ·</span>
+            <span>Credentials · Skills · Certified ·</span>
+          </div>
+        </div>
+        <div class="site-marquee__row site-marquee__row--offset">
+          <div class="site-marquee__track site-marquee__track--right">
+            <span>Microsoft · Pearson · Cybersecurity ·</span>
+            <span>Microsoft · Pearson · Cybersecurity ·</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-shell-inner">
+        <p class="site-label site-fade"><span class="site-label-line" aria-hidden="true"></span>Credentials</p>
+        <h1 class="site-page-title site-fade site-fade-delay-1" aria-label="Certification">
+          <span class="site-page-title__word site-page-title__word--accent">Certification</span>
+        </h1>
+        <div class="certificate-container site-fade site-fade-delay-2">
       <div class="text-container2">
         <img src="images/word.png" alt="Word Certificate Badge" />
         <div class="text-container2-text">
@@ -36,7 +70,7 @@
           <p>Issued by Microsoft</p>
           <p>Date: March 2024</p>
         </div>
-        <a class="view-button" href="certificates/Word 2019 Associate.pdf" target="_blank">View</a>
+        <a class="view-button" href="images/cert-word-2019.jpg" target="_blank">View</a>
       </div>
       <div class="text-container2">
         <img src="images/ppt.png" alt="PPT Badge" />
@@ -45,7 +79,7 @@
           <p>Issued by Microsoft</p>
           <p>Date: May 2024</p>
         </div>
-        <a class="view-button" href="certificates/PowerPoint 2019 Associate.pdf" target="_blank">View</a>
+        <a class="view-button" href="images/cert-powerpoint-2019.jpg" target="_blank">View</a>
       </div>
       <div class="text-container2">
         <img src="images/database .png" alt="database Badge" />
@@ -54,7 +88,7 @@
           <p>Issued by Pearson</p>
           <p>Date: May 2025</p>
         </div>
-        <a class="view-button" href="certificates/databasecert.pdf" target="_blank">View</a>
+        <a class="view-button" href="images/cert-databases.jpg" target="_blank">View</a>
       </div>
       <div class="text-container2">
         <img src="images/it-specialist-html-and-css.png" alt="HTML and CSS Certificate Badge" />
@@ -63,7 +97,7 @@
           <p>Issued by Pearson</p>
           <p>Date: November 2026</p>
         </div>
-        <a class="view-button" href="certificates/Marqueses_html_and_css_cert.pdf" target="_blank">View</a>
+        <a class="view-button" href="images/cert-html-and-css.jpg" target="_blank">View</a>
       </div>
       <div class="text-container2">
         <img src="images/it-specialist-cybersecurity.png" alt="Cybersecurity Certificate Badge" />
@@ -72,9 +106,12 @@
           <p>Issued by Pearson</p>
           <p>Date: November 2026</p>
         </div>
-        <a class="view-button" href="certificates/Marqueses_Cyber_cert.pdf" target="_blank">View</a>
+        <a class="view-button" href="images/cert-cybersecurity.jpg" target="_blank">View</a>
       </div>
-    </div>
+        </div>
+      </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>

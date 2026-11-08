@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="final-project.css" />
+    <link rel="stylesheet" href="dark-mode.css" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="amira-about.css" />
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png" />
     <title>Amira Rachel Marqueses | About</title>
   </head>
@@ -17,7 +20,7 @@
           <img class="item" src="images/logo.png" alt="Adobe logo" />
         </a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <div class="nav-links" id="navLinks">
         <a class="active" href="about-me.html">About</a>
         <a href="projects.html">Projects</a>
@@ -26,21 +29,87 @@
         <a href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
     </div>
-    <h1 class="center">About Me</h1>
-    <div class="aboutme-container">
-      <img src="images/ara.jpeg" alt="me" />
-      <div class="text-container">
-        <p>
-          Hi, I’m Amira Rachel Marqueses, a 4th-year Bachelor of Science in Information Technology (BSIT) student at St. Dominic College of Asia. I aspire to become a software developer and create meaningful applications that blend
-          functionality with great design. I enjoy exploring various programming languages, designing intuitive user interfaces, and diving into new technologies.
-        </p>
-        <p>
-          My passion for software development comes from a love for problem-solving and building useful tools. I’m driven by the opportunity to turn ideas into real-world solutions, whether it's simplifying everyday tasks, helping others,
-          or creating new experiences. I’m committed to continuous learning and always seeking opportunities to grow, collaborate, and take on exciting challenges.
-        </p>
+
+    <section class="amz" id="about">
+      <div class="amz__marquee" aria-hidden="true">
+        <div class="amz__row">
+          <div class="amz__track amz__track--left">
+            <span>Software Developer · Great Design · Problem Solving ·</span>
+            <span>Software Developer · Great Design · Problem Solving ·</span>
+          </div>
+        </div>
+        <div class="amz__row amz__row--2">
+          <div class="amz__track amz__track--right">
+            <span>Real-World Solutions · Continuous Learning · Useful Tools ·</span>
+            <span>Real-World Solutions · Continuous Learning · Useful Tools ·</span>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div class="amz__inner">
+        <div class="amz__tilt-zone">
+          <div class="amz__card">
+            <div class="amz__outline" aria-hidden="true"></div>
+            <div class="amz__photo-box">
+              <img class="amz__photo" src="images/ara.jpeg" alt="Amira Rachel Marqueses" />
+              <span class="amz__glare" aria-hidden="true"></span>
+            </div>
+            <div class="amz__badge">
+              <span class="amz__badge-icon">
+                <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10L12 5 2 10l10 5 10-5z" />
+                  <path d="M6 12v5c3 2 9 2 12 0v-5" />
+                </svg>
+              </span>
+              <span class="amz__badge-text">
+                <span class="amz__badge-title">4th-year BSIT</span>
+                <span class="amz__badge-sub">St. Dominic College of Asia</span>
+              </span>
+            </div>
+            <svg class="amz__sparkle" aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="amz__text">
+          <p class="amz__label amz__fade"><span class="amz__label-line" aria-hidden="true"></span>About me</p>
+
+          <h2 class="amz__title" aria-label="Turning ideas into real-world solutions.">
+            <span class="amz__word" aria-hidden="true" style="animation-delay: 0.15s">Turning</span>
+            <span class="amz__word" aria-hidden="true" style="animation-delay: 0.27s">ideas</span>
+            <span class="amz__word" aria-hidden="true" style="animation-delay: 0.39s">into</span>
+            <span class="amz__word amz__word--accent" aria-hidden="true" style="animation-delay: 0.51s">real-world</span>
+            <span class="amz__word amz__word--accent" aria-hidden="true" style="animation-delay: 0.63s">solutions.</span>
+          </h2>
+
+          <p class="amz__lead amz__fade" style="animation-delay: 0.9s">
+            Hi, I'm Amira Rachel Marqueses, a 4th-year BSIT student at St. Dominic College of Asia. I aspire to become a software developer and create meaningful applications that blend functionality with great design.
+          </p>
+
+          <p class="amz__para amz__fade" style="animation-delay: 1.1s">
+            My passion for software development comes from a love for problem-solving and building useful tools. I'm driven by the opportunity to turn ideas into real-world solutions, whether it's simplifying everyday tasks, helping others, or creating new experiences. I'm committed to continuous learning and always seeking opportunities to grow, collaborate, and take on exciting challenges.
+          </p>
+
+          <div class="amz__list amz__fade" style="animation-delay: 1.3s">
+            <div class="amz__item"><span class="amz__num">01</span><span class="amz__item-text">Exploring various programming languages</span></div>
+            <div class="amz__item"><span class="amz__num">02</span><span class="amz__item-text">Designing intuitive user interfaces</span></div>
+            <div class="amz__item"><span class="amz__num">03</span><span class="amz__item-text">Diving into new technologies</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="leadership-section" aria-labelledby="leadership-heading">
       <p class="leadership-eyebrow">About — Leadership</p>
@@ -69,7 +138,7 @@
                 <span class="leadership-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" focusable="false"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z"/></svg>
                 </span>
-                <span>As a senior member, also guide and support the team in completing key tasks and initiatives.</span>
+                <span>Supported the organization and its members in completing key tasks and initiatives.</span>
               </li>
             </ul>
           </div>
@@ -97,10 +166,38 @@
                 <span class="leadership-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" focusable="false"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z"/></svg>
                 </span>
-                <span>As a senior member, also guide and support the team in completing key tasks and initiatives.</span>
+                <span>Supported the organization and its members in completing key tasks and initiatives.</span>
               </li>
             </ul>
             <a class="leadership-view" href="certificates/dominixode-secretary.png" target="_blank" rel="noopener noreferrer">View</a>
+          </div>
+        </article>
+
+        <article class="leadership-card">
+          <div class="leadership-card-header">
+            <img class="leadership-logo" src="images/jpcs-sdca-logo.jpg" alt="JPCS SDCA Chapter logo" />
+            <div class="leadership-card-meta">
+              <h3>Secretary</h3>
+              <p>Junior Philippine Computer Society (JPCS) — SDCA Chapter</p>
+            </div>
+            <span class="leadership-badge">2025–2026</span>
+          </div>
+          <div class="leadership-card-body">
+            <p class="leadership-contrib-label">Key Contributions</p>
+            <ul class="leadership-contrib-list">
+              <li>
+                <span class="leadership-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zm0 2.5L17.5 8H14zM8 13h8v1.5H8zm0 3.5h8V18H8zm0-7h5V11H8z"/></svg>
+                </span>
+                <span>JPCS is a national student organization for computing and IT majors that builds skills through seminars, competitions, and industry-aligned activities; the SDCA Chapter serves students at St. Dominic College of Asia.</span>
+              </li>
+              <li>
+                <span class="leadership-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" focusable="false"><path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-4 0-7 2-7 4.5V20h14v-1.5C19 16 16 14 12 14z"/></svg>
+                </span>
+                <span>Coordinated chapter communications and supported member coordination for events and activities.</span>
+              </li>
+            </ul>
           </div>
         </article>
       </div>

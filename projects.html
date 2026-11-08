@@ -6,10 +6,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="final-project.css" />
+    <link rel="stylesheet" href="dark-mode.css" />
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="amira-about.css" />
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png" />
     <title>Amira Rachel Marqueses | My Projects</title>
   </head>
@@ -20,7 +23,7 @@
           <img class="item" src="images/logo.png" alt="Adobe logo" />
         </a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <div class="nav-links" id="navLinks">
         <a href="about-me.html">About</a>
         <a class="active" href="projects.html">Projects</a>
@@ -29,17 +32,50 @@
         <a href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
     </div>
 
-    <h1 class="center">My Projects</h1>
+    <section class="amz amz--projects" id="projects">
+      <div class="amz__marquee" aria-hidden="true">
+        <div class="amz__row">
+          <div class="amz__track amz__track--left">
+            <span>IoT Systems · Capstone · Web Apps ·</span>
+            <span>IoT Systems · Capstone · Web Apps ·</span>
+          </div>
+        </div>
+        <div class="amz__row amz__row--2">
+          <div class="amz__track amz__track--right">
+            <span>RFID · Next.js · Real-World Builds ·</span>
+            <span>RFID · Next.js · Real-World Builds ·</span>
+          </div>
+        </div>
+      </div>
 
-    <nav class="achievements-tabs" aria-label="Project categories">
-      <a href="#iot-project">IoT Project</a>
-      <a href="#capstone-project">Capstone Project</a>
-      <a href="#third-year-course-projects">Third-Year Course Projects</a>
-    </nav>
+      <div class="amz__inner amz__inner--stack">
+        <header class="amz__projects-header amz__fade">
+          <p class="amz__label"><span class="amz__label-line" aria-hidden="true"></span>Portfolio</p>
+          <h1 class="amz__title amz__title--page" aria-label="My Projects">
+            <span class="amz__word" aria-hidden="true" style="animation-delay: 0.15s">My</span>
+            <span class="amz__word amz__word--accent" aria-hidden="true" style="animation-delay: 0.27s">Projects</span>
+          </h1>
+        </header>
 
-    <div class="achievements-page">
+        <nav class="achievements-tabs amz__fade" style="animation-delay: 0.45s" aria-label="Project categories">
+          <a href="#iot-project">IoT Project</a>
+          <a href="#capstone-project">Capstone Project</a>
+          <a href="#third-year-course-projects">Third-Year Course Projects</a>
+        </nav>
+
+        <div class="achievements-page amz__fade" style="animation-delay: 0.65s">
       <section class="achievement-category" id="iot-project">
         <h2 class="achievement-category-title">IoT Project</h2>
         <div class="project-container">
@@ -254,7 +290,9 @@
           </div>
         </div>
       </section>
-    </div>
+        </div>
+      </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

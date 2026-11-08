@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=National+Park:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="final-project.css"/>
+    <link rel="stylesheet" href="dark-mode.css"/>
+    <script src="theme.js"></script>
+    <link rel="stylesheet" href="site-style.css"/>
     <link rel="icon" type="image/x-icon" href="images/Adobe Express - file.png">
     <title>Amira Rachel Marqueses | Tech Stack</title>
   </head>
@@ -17,7 +20,7 @@
         <img class="item" src="images/logo.png" alt="Adobe logo">
         </a>
       </div>
-      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+<div class="hamburger" onclick="toggleMenu()">&#9776;</div>
       <div class="nav-links" id="navLinks">
         <a href="about-me.html">About</a>
         <a href="projects.html">Projects</a>
@@ -26,13 +29,45 @@
         <a href="certificate.html">Certification</a>
         <a href="contact.html">Contact</a>
       </div>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"></path>
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+        </svg>
+      </button>
+
     </div>
-    <h1 class="center">Tech Stack</h1>
-    <div class="text-container1">
-      <p>Here are the languages and tools I’ve learned and worked with throughout my journey. They’ve helped me build, debug, and deploy projects ranging from simple static pages to more complex applications. I'm always eager to explore new technologies and expand this stack even further.</p>
-    </div>
-    <h2 class="skills">Languages</h2>
-    <div class="picture-container">
+
+    <main class="site-shell">
+      <div class="site-marquee" aria-hidden="true">
+        <div class="site-marquee__row">
+          <div class="site-marquee__track site-marquee__track--left">
+            <span>Languages · Frameworks · Tools ·</span>
+            <span>Languages · Frameworks · Tools ·</span>
+          </div>
+        </div>
+        <div class="site-marquee__row site-marquee__row--offset">
+          <div class="site-marquee__track site-marquee__track--right">
+            <span>React · Next.js · MongoDB ·</span>
+            <span>React · Next.js · MongoDB ·</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-shell-inner">
+        <p class="site-label site-fade"><span class="site-label-line" aria-hidden="true"></span>Skills</p>
+        <h1 class="site-page-title site-fade site-fade-delay-1" aria-label="Tech Stack">
+          <span class="site-page-title__word">Tech</span>
+          <span class="site-page-title__word site-page-title__word--accent">Stack</span>
+        </h1>
+        <div class="text-container1 site-fade site-fade-delay-2">
+          <p>Here are the languages and tools I’ve learned and worked with throughout my journey. They’ve helped me build, debug, and deploy projects ranging from simple static pages to more complex applications. I'm always eager to explore new technologies and expand this stack even further.</p>
+        </div>
+        <h2 class="skills site-fade site-fade-delay-3">Languages</h2>
+        <div class="picture-container site-fade site-fade-delay-3">
       <div class="tooltip-container">
         <img src="images/c++.png" class="circle-container">
         <div class="tooltip-text">C++</div>
@@ -62,61 +97,68 @@
         <div class="tooltip-text">Dart</div>
       </div>
     </div>
-    <h2 class="skills">Tools</h2>
-    <div class="picture-container">
-      <div class="tooltip-container">
-        <img src="images/vs.png" class="circle-container">
-        <div class="tooltip-text">VS Code</div>
+        <h2 class="skills site-fade site-fade-delay-3">Tools</h2>
+        <div class="picture-container site-fade site-fade-delay-3">
+          <div class="tooltip-container">
+            <img src="images/vs.png" class="circle-container">
+            <div class="tooltip-text">VS Code</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/github.png" class="circle-container">
+            <div class="tooltip-text">Github</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/apex.jpg" class="circle-container">
+            <div class="tooltip-text">Oracle Apex</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/android.png" class="circle-container">
+            <div class="tooltip-text">Android Studio</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/netbeans.png" class="circle-container">
+            <div class="tooltip-text">Apache Netbeans</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/flutter.png" class="circle-container">
+            <div class="tooltip-text">Flutter</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/firebase.png" class="circle-container">
+            <div class="tooltip-text">Firebase</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/mongodb.svg" class="circle-container">
+            <div class="tooltip-text">MongoDB</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/node.png" class="circle-container">
+            <div class="tooltip-text">Node</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/reactjs.png" class="circle-container" alt="React js">
+            <div class="tooltip-text">React js</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/nextjs.png" class="circle-container" alt="Next js">
+            <div class="tooltip-text">Next js</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/express.svg" class="circle-container">
+            <div class="tooltip-text">Express</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/postman.svg" class="circle-container">
+            <div class="tooltip-text">Postman</div>
+          </div>
+          <div class="tooltip-container">
+            <img src="images/render.jpeg" class="circle-container">
+            <div class="tooltip-text">Render</div>
+          </div>
+        </div>
       </div>
-      <div class="tooltip-container">
-        <img src="images/github.png" class="circle-container">
-        <div class="tooltip-text">Github</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/apex.jpg" class="circle-container">
-        <div class="tooltip-text">Oracle Apex</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/android.png" class="circle-container">
-        <div class="tooltip-text">Android Studio</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/netbeans.png" class="circle-container">
-        <div class="tooltip-text">Apache Netbeans</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/flutter.png" class="circle-container">
-        <div class="tooltip-text">Flutter</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/firebase.png" class="circle-container">
-        <div class="tooltip-text">Firebase</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/mongodb.svg" class="circle-container">
-        <div class="tooltip-text">MongoDB</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/node.png" class="circle-container">
-        <div class="tooltip-text">Node</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/nextjs.png" class="circle-container" alt="Next js">
-        <div class="tooltip-text">Next js</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/express.svg" class="circle-container">
-        <div class="tooltip-text">Express</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/postman.svg" class="circle-container">
-        <div class="tooltip-text">Postman</div>
-      </div>
-      <div class="tooltip-container">
-        <img src="images/render.jpeg" class="circle-container">
-        <div class="tooltip-text">Render</div>
-      </div>
-    </div>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
